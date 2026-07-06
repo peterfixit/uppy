@@ -1,0 +1,99 @@
+NAME
+       uppy - Linux update, maintenance and setup utility
+
+SYNOPSIS
+       uppy [OPTIONS]
+
+DESCRIPTION
+       UPPY  is  a  single-file Linux update, maintenance and setup utility for Arch, CachyOS, Nobara, Fedora
+       and Debian-based systems.  It can update the operating system, update Flatpaks, configure NFS  mounts,
+       check iSCSI backup storage, run distro-specific debloat routines, install workstation and gaming Flat‐
+       paks, create backups, and install its own manual page and shell completion.
+
+OPTIONS
+       -h, --help
+              Show help and exit.
+
+       -n, --no-maintenance
+              Update the system and Flatpaks only, then skip optional maintenance.
+
+       -r, --reboot
+              Update the system and Flatpaks only, skip optional maintenance, then reboot.
+
+       -q, --quiet
+              Reduce UPPY's own output.
+
+       -y, --yes
+              Answer yes to UPPY prompts.
+
+       --verbose
+              Show commands before running them.
+
+       --dry-run
+              Print privileged commands without running them.
+
+       --debloat
+              Run only the distro-specific debloat routine.
+
+       --gaming
+              Install gaming applications only.
+
+       --workstation
+              Install workstation applications only.
+
+       --mounts
+              Configure NFS/iSCSI items only.
+
+       --repair
+              Run iSCSI/filesystem repair checks only.
+
+       --backup
+              Export installed package and configuration information only.
+
+       --check
+              Run a read-only system check.
+
+       --clean
+              Run package cleanup and cache cleanup only.
+
+       --self-update
+              Download the latest uppy.sh from UPPY_UPDATE_URL and install it.
+
+EXAMPLES
+       uppy   Interactive update and maintenance mode.
+
+       uppy -n
+              Update only.
+
+       uppy -r
+              Update only, then reboot.
+
+       uppy --debloat
+              Run distro-specific debloat only.
+
+       uppy --check
+              Show a read-only system report.
+FILES
+       /usr/local/bin/uppy
+              Installed command.
+
+       /usr/local/share/man/man1/uppy.1.gz
+              Manual page installed by UPPY.
+
+       /etc/bash_completion.d/uppy
+              Bash completion installed by UPPY.
+
+       /var/log/uppy.log
+              Log file when run as root.
+
+       ~/uppy.log
+              Log file when run as a normal user.
+
+AUTHOR
+       Peter Haworth
+
+SEE ALSO
+       apt(8), dnf(8), pacman(8), flatpak(1), iscsiadm(8), mount(8), systemctl(1)
+
+UPPY 2.0.1                                        July 2026                                           UPPY(1)
+ Manual page uppy(1) line 8/101 (END) (press h for help or q to quit)
