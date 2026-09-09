@@ -169,3 +169,90 @@ The GUI log rotates to `gui.log.old` after approximately 2 MB.
 UPPY is released under the MIT License. See [LICENSE](LICENSE).
 Bundled build dependencies retain their own licenses; see
 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+
+
+
+
+
+UPPY
+Linux Update, Maintenance & Setup Utility
+Version 2.0.4 • User Commands • September 2026
+UPPY 2.0.4 | USER COMMANDS
+uppy - Linux update, maintenance and setup utility
+UPPY is a single-file Linux utility for Arch, CachyOS, Nobara, Fedora and Debian-based
+systems. It updates the OS and Flatpaks, configures NFS, checks iSCSI backup storage,
+handles distro-specific cleanup, installs workstation and gaming apps, creates backups, and
+installs its own manual page and shell completion.
+SYNOPSIS
+uppy [OPTIONS]
+QUICK COMMANDS
+uppy
+uppy -n
+uppy -r
+uppy -s
+OPTIONS
+OPTION
+-h, --help
+-n, --no-maintenance
+-r, --reboot
+-s, --shutdown
+-q, --quiet
+-y, --yes
+--verbose
+--dry-run
+--debloat
+--gaming
+--workstation
+--mounts
+Interactive update and maintenance mode.
+Update only; skip optional maintenance.
+Update only, then reboot.
+Update only, then shut down.
+BEHAVIOUR
+Show help and exit.
+Update the system and Flatpaks only, then skip optional
+maintenance.
+Update the system and Flatpaks only, skip optional
+maintenance, then reboot.
+Update the system and Flatpaks only, skip optional
+maintenance, then shut down.
+Reduce UPPY's own output.
+Answer yes to UPPY prompts.
+Show commands before running them.
+Print privileged commands without running them.
+Run only the distro-specific debloat routine.
+Install gaming applications only.
+Install workstation applications only.
+Configure NFS/iSCSI items only.
+UPPY 2.0.4 - September 2026 - 1
+--repair
+--backup
+--check
+--clean
+--self-update
+UPPY 2.0.4 | USER COMMANDS
+Run iSCSI/filesystem repair checks only.
+Export installed package and configuration information only.
+Run a read-only system check.
+Run package cleanup and cache cleanup only.
+Download the latest uppy.sh from UPPY_UPDATE_URL and
+install it.
+EXAMPLES
+uppy Interactive update and maintenance mode.
+uppy -n Update only.
+uppy -r Update only, then reboot.
+uppy -s Update only, then shut down.
+uppy --debloat Run distro-specific debloat only.
+uppy --check Show a read-only system report.
+FILES
+/usr/local/bin/uppy Installed command.
+/usr/local/share/man/man1/uppy.1.gz Manual page installed by UPPY.
+/etc/bash_completion.d/uppy Bash completion installed by UPPY.
+/var/log/uppy.log Log file when run as root.
+~/uppy.log Log file when run as a normal user.
+REFERENCE
+AUTHOR
+SEE ALSO
+Peter Haworth
+apt(8), dnf(8), pacman(8), flatpak(1),
+iscsiadm(8), mount(8), systemctl(1)
